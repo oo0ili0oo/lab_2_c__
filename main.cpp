@@ -19,6 +19,6 @@ int main()
     for(i = 0; i <= n; add *= (i + 1) * x, ++i)
         sum += add;
 
-    cout << "\nResult = %.2f\n" << sum;
+    cout << "\nResult = " << sum;
     return 0;
 }
