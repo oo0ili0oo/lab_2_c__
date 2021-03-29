@@ -30,7 +30,7 @@ int main()
     cout << "Input |x| < 1: ";
     x = check();
 
-    for(i = 0; i <= n; add *= (i + 1) * x, ++i)
+    for(i = 0; i <= n; add *= (i + 1) * pow(x, i), ++i)
         sum += add;
 
     cout << "\nResult = " << sum;
