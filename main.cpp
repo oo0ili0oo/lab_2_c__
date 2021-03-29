@@ -3,7 +3,7 @@
 #include <limits>
 
 using namespace std;
-#define n 10
+#define n 6
 
 double check(){
     double y;
@@ -18,19 +18,19 @@ double check(){
             cout << "Try again\n";
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }while(cin.fail()||fabs(y) >= 1);
-    return y;
+    return fabs(y);
 }
 
 int main()
 {
     int i;
-    double x, sum = 0, add = 1;
+    double x, sum = 0, add = 0;
 
 
     cout << "Input |x| < 1: ";
     x = check();
 
-    for(i = 0; i <= n; add *= (i + 1) * pow(x, i), ++i)
+    for(i = 0; i-1 <= n; add = (i + 1) * pow(x, i), ++i)
         sum += add;
 
     cout << "\nResult = " << sum;
